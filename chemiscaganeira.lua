@@ -1,5 +1,5 @@
 -- Correções iniciais antes de carregar a Orion Library
-getgenv().gethui = function() return game.CoreGui end
+getgenv().gethui = game.CoreGui
 print("Erros sendo corrigidos")
 
 -- Carregar Orion Library
@@ -13,7 +13,7 @@ local scripts = {
         { Name = "Speed Hack", Code = "loadstring(game:HttpGet('https://example.com/jailbreak-speedhack.lua'))()" }
     },
     ["Arsenal"] = {
-        { Name = "Aimbot", Code = "loadstring(game:HttpGet('https://example.com/arsenal-aimbot.lua'))()" },
+        { Name = "sanity.lol - KEY_k7DqBcjp2q", Code = "loadstring(game:HttpGet('https://raw.githubusercontent.com/helldevelopment/RobloxScripts/main/SanityLoader.lua'))()" },
         { Name = "ESP", Code = "loadstring(game:HttpGet('https://example.com/arsenal-esp.lua'))()" },
         { Name = "No Recoil", Code = "loadstring(game:HttpGet('https://example.com/arsenal-norecoil.lua'))()" }
     },
@@ -107,7 +107,7 @@ local function createConfigTab(window)
     ConfigTab:AddButton({
         Name = "Corrigir Erros",
         Callback = function()
-            getgenv().gethui = function() return game.CoreGui end
+            getgenv().gethui = game.CoreGui
             print("Erros sendo corrigidos")
             OrionLib:MakeNotification({
                 Name = "Erros Corrigidos",
